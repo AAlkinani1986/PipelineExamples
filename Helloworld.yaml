@@ -1,0 +1,12 @@
+name: Helloworld-Pipeline
+
+trigger:
+  - main  # Trigger the pipeline when changes are pushed to the 'main' branch
+
+pool:
+  vmImage: 'ubuntu-latest'  # Use the latest Ubuntu image for the build agent
+
+jobs:
+- job: helloworld
+  steps:
+    - script: echo "Hello, World!"  # Print Hello World to the console
